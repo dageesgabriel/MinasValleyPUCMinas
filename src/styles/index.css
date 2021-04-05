@@ -1,0 +1,70 @@
+.index-tema {
+    text-align: center;
+}
+
+.index-tema2 {
+    text-align: center;
+    height: auto;
+}
+
+.index-tema3 {
+    text-align: center;
+    font: 20px arial, sans-serif;
+}
+
+.index-tema-icons {
+    text-align: left;
+    font: 20px arial, sans-serif;
+}
+
+.index-fontPhraseFinal {
+    font: 16px arial, sans-serif;
+}
+
+.index-btn:focus, .index-btn::-moz-focus-inner {
+    outline: none;
+    border: none;
+}
+
+.index-btn-gray {
+    background: #d9d9d9;
+    color: #000000;
+    box-shadow: 0 5px 0 #bebebe;
+}
+
+.index-btn-gray:hover {
+    background: #bebebe;
+    box-shadow: 0 5px 0 #929292;
+}
+
+.index-btn-gray:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+.animate-svg {
+    fill: transparent; /* #65bbf2 */
+    stroke: black;
+    stroke-dasharray: 2266;
+    stroke-dashoffset: 0;
+    animation: 5s desenha infinite alternate;
+}
+
+    .animate-svg svg {
+        stroke-width: 10px;
+        stroke: #ffffff;
+        stroke-dasharray: 100266;
+        stroke-dashoffset: 0;
+        animation: svganimation 10s ease-in-out forwards;
+    }
+
+@keyframes svganimation {
+    from {
+        stroke-dashoffset: 100266;
+    }
+    to {
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+}
