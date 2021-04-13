@@ -38,3 +38,4 @@ JavaScript:
 - O diretório `styles` é utilizado para os arquivos CSS
 - O diretório `vendor` é reservado para incluir bibliotecas e frameworks
   utilizados no projeto como Bootstrap, jQuery, etc.
+- O diretório `banco-dados` é utilizado para armazenar os codigos e informações do banco de dados.
