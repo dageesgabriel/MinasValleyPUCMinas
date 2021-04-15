@@ -27,8 +27,8 @@ USE `MinasValley`;
 	ALTER TABLE `Usuario` ADD CONSTRAINT `FK_Usuario_Cadastro`
     FOREIGN KEY (`IdCadastro`)
     REFERENCES `Cadastro` (`NomeUsuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE;
 
 
 
@@ -39,8 +39,8 @@ USE `MinasValley`;
 	ALTER TABLE `Projeto` ADD CONSTRAINT `FK_Projeto_Usuario`
     FOREIGN KEY (`IdUsuario`)
     REFERENCES `Usuario` (`Id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE;
 
 
 -- -----------------------------------------------------
@@ -50,5 +50,5 @@ USE `MinasValley`;
 	ALTER TABLE `Startup` ADD CONSTRAINT `FK_Startup_Usuario`
     FOREIGN KEY (`IdUsuario`)
     REFERENCES `Usuario` (`Id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE;
