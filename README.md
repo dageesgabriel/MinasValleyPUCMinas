@@ -1,6 +1,6 @@
 # Link do Site
 
-https://minasvalley.herokuapp.com/
+https://minasvalleypucminas.herokuapp.com/
 
 # GITFLOW
 
