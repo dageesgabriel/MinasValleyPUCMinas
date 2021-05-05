@@ -25,7 +25,7 @@ USE `MinasValley`;
 DROP TABLE IF EXISTS `Cadastro` ;
 
 CREATE TABLE IF NOT EXISTS `Cadastro` (
-  `NomeUsuario` VARCHAR(80) NOT NULL,
+  `NomeUsuario` VARCHAR(8) NOT NULL,
   `Nome` VARCHAR(80) NOT NULL,
   `E-mail` VARCHAR(45) NOT NULL,
   `Senha` VARCHAR(15) NOT NULL)
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `Usuario` (
   `Nome` VARCHAR(45) NOT NULL,
   `E-mail` VARCHAR(45) NOT NULL,
   `Senha` VARCHAR(15) NOT NULL,
-  `IdCadastro` VARCHAR(80) NOT NULL)
+  `IdCadastro` VARCHAR(8) NOT NULL)
 ENGINE = InnoDB;
 
 

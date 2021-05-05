@@ -18,7 +18,9 @@ USE `MinasValley`;
 -- Table `Cadastro`
 -- -----------------------------------------------------
 	ALTER TABLE `Cadastro` ADD CONSTRAINT `PK_Cadastro` PRIMARY KEY (`NomeUsuario`);
-  
+	  ON DELETE SET NULL
+    ON UPDATE CASCADE;
+
 
 -- -----------------------------------------------------
 -- Table `Usuario`
@@ -29,7 +31,6 @@ USE `MinasValley`;
     REFERENCES `Cadastro` (`NomeUsuario`)
     ON DELETE SET NULL
     ON UPDATE CASCADE;
-
 
 
 -- -----------------------------------------------------
