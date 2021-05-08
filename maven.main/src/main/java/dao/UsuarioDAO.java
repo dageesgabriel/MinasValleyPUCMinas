@@ -6,6 +6,7 @@ import model.Usuario;
 
 public class UsuarioDAO {
 	private Connection conexao;
+	private int maxId = 0;
 	
 	public UsuarioDAO() {
 		conexao = null;
@@ -47,10 +48,15 @@ public class UsuarioDAO {
 		return status;
 	}
 	
+	public int getMaxId() {
+		return maxId;
+	}
+	
 	public boolean inserirUsuario(Usuario usuario) {
 		boolean status = false;
 		try {  
 			Statement st = conexao.createStatement();
+			this.maxId = (usuario.getId() > this.maxId) ? usuario.getId() : this.maxId;
 			st.executeUpdate("INSERT INTO Usuario (Id, DataNascimento, Nome, Email, Senha, IdCadastro) "
 					       + "VALUES ("+usuario.getId()+ ", '" + usuario.getDataNascimento() + "', '"  
 					       + usuario.getNome() + "', '" + usuario.getEmail() + ", '" + usuario.getSenha() + "');"); 
@@ -60,7 +66,7 @@ public class UsuarioDAO {
 		} catch (SQLException u) {  
 			throw new RuntimeException(u);
 		}
-		return status;
+		return status;	
 	}
 	
 	public boolean atualizarUsuario(Usuario usuario) {
@@ -80,11 +86,11 @@ public class UsuarioDAO {
 		return status;
 	}
 	
-	public boolean excluirUsuario(int id) {
+	public boolean excluirUsuario(String nome) {
 		boolean status = false;
 		try {  
 			Statement st = conexao.createStatement();
-			st.executeUpdate("DELETE FROM usuario WHERE id = " + id);
+			st.executeUpdate("DELETE FROM Usuario WHERE Nome = " + nome);
 			st.close();
 			status = true;
 		} catch (SQLException u) {  
@@ -93,6 +99,22 @@ public class UsuarioDAO {
 		return status;
 	}
 	
+	public Usuario getUsuario(String nome) {
+		Usuario usuario;
+		try {  
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT FROM Usuario WHERE Nome = " + nome);
+			
+			usuario = new Usuario(rs.getInt("id"), rs.getString("nome"), 
+            rs.getString("email"), rs.getString("senha"), 
+            rs.getDate("dataNascimento"), rs.getString("idCadastro"));
+			
+			st.close();
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);
+		}
+		return usuario;
+	}
 	
 	public Usuario[] getUsuarios() {
 		Usuario[] usuarios = null;
