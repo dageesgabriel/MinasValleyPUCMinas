@@ -140,7 +140,8 @@ public class UsuarioDAO {
 		return usuarios;
 	}
 	
-	public Usuario[] getUsuariosMasculinos() {
+	// Nao necessario no momento, se for preciso modificamos este metodo p/ alguma coisa no futuro
+	/*public Usuario[] getUsuariosMasculinos() {
 		Usuario[] usuarios = null;
 		
 		try {
@@ -162,5 +163,5 @@ public class UsuarioDAO {
 			System.err.println(e.getMessage());
 		}
 		return usuarios;
-	}
+	} */
 }

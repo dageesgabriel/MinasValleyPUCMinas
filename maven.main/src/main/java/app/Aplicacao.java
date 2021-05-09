@@ -19,7 +19,6 @@ public class Aplicacao {
 
         get("/usuario/delete/:id", (request, response) -> usuarioService.remove(request, response));
 
-        // get("/usuario", (request, response) -> usuarioService.getAll(request, response));
-               
+        get("/usuario", (request, response) -> usuarioService.getAll(request, response));
     }
 }

@@ -45,8 +45,7 @@ public class UsuarioService {
 
 		if (usuario != null) {
 			dao.close();
-			return usuario; // Mudar aqui para retornar oq precisar
-								// Este metodo deve que vai procurar por nome e nao por ID
+			return usuario;
 		} else {
 			response.status(404); // 404 Not found
 			dao.close();
@@ -100,22 +99,20 @@ public class UsuarioService {
 		}
 	}
 
-	// Se precisar de um getAll dps so trabalhar neste metodo aqui
-	// Nao acho q vamos usar, mas vou deixar aqui por precaucao
-	/*
 	public Object getAll(Request request, Response response) {
-		StringBuffer returnValue = new StringBuffer("<produtos type=\"array\">");
-		for (Usuario usuario : dao.getAll()) {
-			returnValue.append("\n<usuario>\n" + "\t<id>" + usuario.getId() + "</id>\n" + "\t<nome>"
-					+ usuario.getNome() + "</nome>\n" + "\t<email>" + usuario.getEmail() + "</email>\n"
-					+ "\t<senha>" + usuario.getSenha() + "</senha>\n" + "\t<dataNascimento>"
-					+ usuario.getDataNascimento() + "</dataNascimento>\n" + "\t<idCadastro>" + usuario.getIdCadastro()
-					+ "</idCadastro>\n" + "</usuario>\n");
+		UsuarioServiceConfig();
+		
+		Usuario[] usuarios = null;
+		usuarios = dao.getUsuarios();
+
+		if (usuarios != null) {
+			dao.close();
+			return usuarios;
+		} else {
+			response.status(404); // 404 Not found
+			dao.close();
+			return "Usuarios não encontrados.";
 		}
-		returnValue.append("</usuario>");
-		response.header("Content-Type", "application/xml");
-		response.header("Content-Encoding", "UTF-8");
-		return returnValue.toString();
 	}
-	*/
+
 }
