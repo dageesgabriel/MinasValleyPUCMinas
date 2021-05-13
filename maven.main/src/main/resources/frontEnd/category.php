@@ -6,7 +6,7 @@ session_start();
 <html>
 <title>Categoria</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="../../img/minasValley/logos/minasValleyFaviconNoFund.png">
+<link rel="shortcut icon" href="../../resources/images/minasValley/logos/minasValleyFaviconNoFund.png">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../styles/category.css">
 <link rel="stylesheet" type="text/css" href="../styles/project.css">
@@ -37,11 +37,11 @@ session_start();
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-        <a class="navbar-brand" href="https://minasvalley.herokuapp.com/"><img src="../../img/minasValley/logos/minasValley02.png" width="150" height="26" alt="Minas Valley"></a>
+        <a class="navbar-brand" href="https://minasvalley.herokuapp.com/"><img src="../../resources/images/minasValley/logos/minasValley02.png" width="150" height="26" alt="Minas Valley"></a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="../../index.php">Home</a></li>
+          <li class="active"><a href="../../resources/index.php">Home</a></li>
           <li><a href="about.php">Sobre nós</a></li>
           <li><a href="category.php">Categorias</a></li>
         </ul>
@@ -62,7 +62,7 @@ session_start();
             if(isset($_SESSION["usu_id"])){
 
               echo "<li><a href='profile.php'><span class='glyphicon glyphicon-user'></span> Perfil</a></li>";
-              echo "<li><a href='../back-end/logout.php'><span class='glyphicon glyphicon-off'></span> Logout</a></li>";
+              echo "<li><a href='../backEnd/logout.php'><span class='glyphicon glyphicon-off'></span> Logout</a></li>";
             }else{
 
               echo "<li><a href='signup.php'><span class='glyphicon glyphicon-user'></span> Cadastre-se</a></li>";
@@ -84,28 +84,28 @@ session_start();
 
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/pagamentoQRCode/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/pagamentoQRCode/logo.jpg" style="width:100%">
       <h3>Pagamento por QR Code</h3>
       <p class="w3-opacity">Startup de Economia</p>
       <p>A Desenfila tem um sistema de hospedagem e de processamento das comandas na nuvem. O mercado Pago acessa essas informações, por meio do QR Code na comanda, e...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/cachorroRobo/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/cachorroRobo/logo.jpg" style="width:100%">
       <h3>Cachorro Robo</h3>
       <p class="w3-opacity">Startup de Robotica</p>
       <p>Se você é do tipo que acha que ter um bichinho de estimação da muito trabalho ou que não tem muito tempo para cuidar, essa nova ideia pode mudar o seu jeito de pensar...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/aloQuemFala/logo.png" style="width:100%">
+      <img src="../../resources/images/projects/aloQuemFala/logo.png" style="width:100%">
       <h3>Alô, quem fala?</h3>
       <p class="w3-opacity">Startup de Dublagem</p>
       <p>O mercado de dublagem vem sofrendo muito com o momento atual devido a pandemia, causada pelo COVID-19. Nossos trabalho foram paralisado, pelo risco de trabalhar em um...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/casaAutomatica/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/casaAutomatica/logo.jpg" style="width:100%">
       <h3>Casa Automática</h3>
       <p class="w3-opacity">Startup de Automação Residencial</p>
       <p>A SmartHó vem com um novo produto para mudar como você fica em casa. Trazendo um produto para automatizar a maior parte de sua casa o jeito que você fica em casa nunca mais...</p>
@@ -117,28 +117,28 @@ session_start();
 
     <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/pagamentoQRCode/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/pagamentoQRCode/logo.jpg" style="width:100%">
       <h3>Pagamento por QR Code</h3>
       <p class="w3-opacity">Startup de Economia</p>
       <p>A Desenfila tem um sistema de hospedagem e de processamento das comandas na nuvem. O mercado Pago acessa essas informações, por meio do QR Code na comanda, e...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/cachorroRobo/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/cachorroRobo/logo.jpg" style="width:100%">
       <h3>Cachorro Robo</h3>
       <p class="w3-opacity">Startup de Robotica</p>
       <p>Se você é do tipo que acha que ter um bichinho de estimação da muito trabalho ou que não tem muito tempo para cuidar, essa nova ideia pode mudar o seu jeito de pensar...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/aloQuemFala/logo.png" style="width:100%">
+      <img src="../../resources/images/projects/aloQuemFala/logo.png" style="width:100%">
       <h3>Alô, quem fala?</h3>
       <p class="w3-opacity">Startup de Dublagem</p>
       <p>O mercado de dublagem vem sofrendo muito com o momento atual devido a pandemia, causada pelo COVID-19. Nossos trabalho foram paralisado, pelo risco de trabalhar em um...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/casaAutomatica/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/casaAutomatica/logo.jpg" style="width:100%">
       <h3>Casa Automática</h3>
       <p class="w3-opacity">Startup de Automação Residencial</p>
       <p>A SmartHó vem com um novo produto para mudar como você fica em casa. Trazendo um produto para automatizar a maior parte de sua casa o jeito que você fica em casa nunca mais...</p>
@@ -150,28 +150,28 @@ session_start();
 
     <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/pagamentoQRCode/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/pagamentoQRCode/logo.jpg" style="width:100%">
       <h3>Pagamento por QR Code</h3>
       <p class="w3-opacity">Startup de Economia</p>
       <p>A Desenfila tem um sistema de hospedagem e de processamento das comandas na nuvem. O mercado Pago acessa essas informações, por meio do QR Code na comanda, e...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/cachorroRobo/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/cachorroRobo/logo.jpg" style="width:100%">
       <h3>Cachorro Robo</h3>
       <p class="w3-opacity">Startup de Robotica</p>
       <p>Se você é do tipo que acha que ter um bichinho de estimação da muito trabalho ou que não tem muito tempo para cuidar, essa nova ideia pode mudar o seu jeito de pensar...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/aloQuemFala/logo.png" style="width:100%">
+      <img src="../../resources/images/projects/aloQuemFala/logo.png" style="width:100%">
       <h3>Alô, quem fala?</h3>
       <p class="w3-opacity">Startup de Dublagem</p>
       <p>O mercado de dublagem vem sofrendo muito com o momento atual devido a pandemia, causada pelo COVID-19. Nossos trabalho foram paralisado, pelo risco de trabalhar em um...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/casaAutomatica/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/casaAutomatica/logo.jpg" style="width:100%">
       <h3>Casa Automática</h3>
       <p class="w3-opacity">Startup de Automação Residencial</p>
       <p>A SmartHó vem com um novo produto para mudar como você fica em casa. Trazendo um produto para automatizar a maior parte de sua casa o jeito que você fica em casa nunca mais...</p>
@@ -183,28 +183,28 @@ session_start();
 
     <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/pagamentoQRCode/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/pagamentoQRCode/logo.jpg" style="width:100%">
       <h3>Pagamento por QR Code</h3>
       <p class="w3-opacity">Startup de Economia</p>
       <p>A Desenfila tem um sistema de hospedagem e de processamento das comandas na nuvem. O mercado Pago acessa essas informações, por meio do QR Code na comanda, e...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/cachorroRobo/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/cachorroRobo/logo.jpg" style="width:100%">
       <h3>Cachorro Robo</h3>
       <p class="w3-opacity">Startup de Robotica</p>
       <p>Se você é do tipo que acha que ter um bichinho de estimação da muito trabalho ou que não tem muito tempo para cuidar, essa nova ideia pode mudar o seu jeito de pensar...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/aloQuemFala/logo.png" style="width:100%">
+      <img src="../../resources/images/projects/aloQuemFala/logo.png" style="width:100%">
       <h3>Alô, quem fala?</h3>
       <p class="w3-opacity">Startup de Dublagem</p>
       <p>O mercado de dublagem vem sofrendo muito com o momento atual devido a pandemia, causada pelo COVID-19. Nossos trabalho foram paralisado, pelo risco de trabalhar em um...</p>
       <p><button class="w3-button w3-light-grey w3-block">Saiba mais</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="../../img/projects/casaAutomatica/logo.jpg" style="width:100%">
+      <img src="../../resources/images/projects/casaAutomatica/logo.jpg" style="width:100%">
       <h3>Casa Automática</h3>
       <p class="w3-opacity">Startup de Automação Residencial</p>
       <p>A SmartHó vem com um novo produto para mudar como você fica em casa. Trazendo um produto para automatizar a maior parte de sua casa o jeito que você fica em casa nunca mais...</p>
@@ -219,12 +219,12 @@ session_start();
 <footer class="w3-padding-32 w3-black w3-center w3-margin-top" id="redes">
     <h5>Nos siga em nossa redes sociais:</h5>
     <div class="w3-xlarge w3-padding-16">
-        <a href="https://facebook.com/" target="_blank"><img src="../../img/socialFavicon/facebook-3-24.png"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="../../img/socialFavicon/instagram-24.png"></a>
-        <a href="https://www.snapchat.com/l/pt-br/" target="_blank"><img src="../../img/socialFavicon/snapchat-24.png"></a>
-        <a href="https://br.pinterest.com/" target="_blank"><img src="../../img/socialFavicon/pinterest-3-24.png"></a>
-        <a href="https://twitter.com/" target="_blank"><img src="../../img/socialFavicon/twitter-3-24.png"></a>
-        <a href="https://www.linkedin.com/" target="_blank"><img src="../../img/socialFavicon/linkedin-3-24.png"></a>
+        <a href="https://facebook.com/" target="_blank"><img src="../../resources/images/socialFavicon/facebook-3-24.png"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../../resources/images/socialFavicon/instagram-24.png"></a>
+        <a href="https://www.snapchat.com/l/pt-br/" target="_blank"><img src="../../resources/images/socialFavicon/snapchat-24.png"></a>
+        <a href="https://br.pinterest.com/" target="_blank"><img src="../../resources/images/socialFavicon/pinterest-3-24.png"></a>
+        <a href="https://twitter.com/" target="_blank"><img src="../../resources/images/socialFavicon/twitter-3-24.png"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../../resources/images/socialFavicon/linkedin-3-24.png"></a>
     </div>
 </footer>
 

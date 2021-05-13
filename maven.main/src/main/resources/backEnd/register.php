@@ -25,7 +25,7 @@
                 if($fileSize < 1000000){
 
                     $fileNewName = uniqid('', true).".".$fileActExt;
-                    $fileDestination = '../../img/img_upload/'.$fileNewName;
+                    $fileDestination = '../../images/img_upload/'.$fileNewName;
                     move_uploaded_file($fileTmpName, $fileDestination);
 
                     require_once 'dbconnection.php';

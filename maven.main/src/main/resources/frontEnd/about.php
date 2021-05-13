@@ -6,7 +6,7 @@ session_start();
 <html>
 <title>Sobre</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="../../img/minasValley/logos/minasValleyFaviconNoFund.png">
+<link rel="shortcut icon" href="../../resources/images/minasValley/logos/minasValleyFaviconNoFund.png">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../styles/project.css">
 <link rel="stylesheet" type="text/css" href="../styles/evaluation.css">
@@ -36,11 +36,11 @@ session_start();
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-        <a class="navbar-brand" href="https://minasvalley.herokuapp.com/"><img src="../../img/minasValley/logos/minasValley02.png" width="150" height="26" alt="Minas Valley"></a>
+        <a class="navbar-brand" href="https://minasvalley.herokuapp.com/"><img src="../../resources/images/minasValley/logos/minasValley02.png" width="150" height="26" alt="Minas Valley"></a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="../../index.php">Home</a></li>
+          <li class="active"><a href="../../resources/index.php">Home</a></li>
           <li><a href="#about">Sobre nós</a></li>
           <li><a href="category.php">Categorias</a></li>
         </ul>
@@ -61,7 +61,7 @@ session_start();
             if(isset($_SESSION["usu_id"])){
 
               echo "<li><a href='profile.php'><span class='glyphicon glyphicon-user'></span> Perfil</a></li>";
-              echo "<li><a href='../back-end/logout.php'><span class='glyphicon glyphicon-off'></span> Logout</a></li>";
+              echo "<li><a href='../backEnd/logout.php'><span class='glyphicon glyphicon-off'></span> Logout</a></li>";
             }else{
 
               echo "<li><a href='signup.php'><span class='glyphicon glyphicon-user'></span> Cadastre-se</a></li>";
@@ -84,7 +84,7 @@ session_start();
         <!-- Head Line -->
         <div class="w3-white w3-text-grey" style="margin: 0 0 30px 0">
             <div class="w3-container">
-                <br><img class="w3-image about-align" src="../../img/minasValley/logos/minasValley05.png">
+                <br><img class="w3-image about-align" src="../../resources/images/minasValley/logos/minasValley05.png">
                 <br>
             </div>
         </div>
@@ -118,7 +118,7 @@ session_start();
     
       <div class="w3-container w3-white w3-margin-bottom">
         <div class="project-space-img">
-            <img src="../../img/minasValley/about/connectedBlueCityCover.jpg" style="width:104%">
+            <img src="../../resources/images/minasValley/about/connectedBlueCityCover.jpg" style="width:104%">
         </div>
       </div>
 
@@ -136,12 +136,12 @@ session_start();
 <footer class="w3-padding-32 w3-black w3-center w3-margin-top" id="redes">
     <h5>Nos siga em nossa redes sociais:</h5>
     <div class="w3-xlarge w3-padding-16">
-        <a href="https://facebook.com/" target="_blank"><img src="../../img/socialFavicon/facebook-3-24.png"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="../../img/socialFavicon/instagram-24.png"></a>
-        <a href="https://www.snapchat.com/l/pt-br/" target="_blank"><img src="../../img/socialFavicon/snapchat-24.png"></a>
-        <a href="https://br.pinterest.com/" target="_blank"><img src="../../img/socialFavicon/pinterest-3-24.png"></a>
-        <a href="https://twitter.com/" target="_blank"><img src="../../img/socialFavicon/twitter-3-24.png"></a>
-        <a href="https://www.linkedin.com/" target="_blank"><img src="../../img/socialFavicon/linkedin-3-24.png"></a>
+        <a href="https://facebook.com/" target="_blank"><img src="../../resources/images/socialFavicon/facebook-3-24.png"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../../resources/images/socialFavicon/instagram-24.png"></a>
+        <a href="https://www.snapchat.com/l/pt-br/" target="_blank"><img src="../../resources/images/socialFavicon/snapchat-24.png"></a>
+        <a href="https://br.pinterest.com/" target="_blank"><img src="../../resources/images/socialFavicon/pinterest-3-24.png"></a>
+        <a href="https://twitter.com/" target="_blank"><img src="../../resources/images/socialFavicon/twitter-3-24.png"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../../resources/images/socialFavicon/linkedin-3-24.png"></a>
     </div>
 </footer>
 

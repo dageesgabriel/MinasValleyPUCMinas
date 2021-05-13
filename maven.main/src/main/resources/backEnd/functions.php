@@ -1,9 +1,9 @@
 <?php
 
-function inputVazio($nome, $email, $usuario, $senha, $senhaconf){
+function inputVazio($nome, $email, $usuario, $data, $senha){
 
     $result;
-    if(empty($nome) || empty($email) || empty($usuario) || empty($senha) || empty($senhaconf)){
+    if(empty($nome) || empty($email) || empty($usuario) || empty($data) || empty($senha)){
 
             $result = true;
     }else{
@@ -41,20 +41,20 @@ function emailInvalido($email){
     
     return $result;
 }
+//
+//function senhaNaoBate($senha, $senha){
 
-function senhaNaoBate($senha, $senhaconf){
+//    $result;
+ //   if($senha !== $senha){
 
-    $result;
-    if($senha !== $senhaconf){
+   //     $result = true;
+    //}else{
 
-        $result = true;
-    }else{
-
-        $result = false;
-    }
+      //  $result = false;
+    //}
     
-    return $result;
-}
+    //return $result;
+//}
 
 function usuarioExiste($conn, $usuario, $email){
 
@@ -63,7 +63,7 @@ function usuarioExiste($conn, $usuario, $email){
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
 
-        header("location: ../front-end/signup.php?error=stmtfalhou");
+        header("location: ../../resources/frontEnd/signup.php?error=stmtfalhou");
         exit();
     }
 
@@ -93,7 +93,7 @@ function criarUsuario($conn, $nome, $usuario, $email, $senha){
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
 
-        header("location: ../front-end/signup.php?error=stmtfalhou");
+        header("location: ../frontEnd/signup.php?error=stmtfalhou");
         exit();
     }
 
@@ -105,7 +105,7 @@ function criarUsuario($conn, $nome, $usuario, $email, $senha){
 
     mysqli_stmt_close($stmt);
 
-    header("location: ../front-end/login.php");
+    header("location: ../frontEnd/login.php");
     exit();
 }
 
@@ -116,7 +116,7 @@ function continueRegister($conn, $prof, $tel, $cidade, $estado, $fileNewName, $i
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
 
-        header("location: ../front-end/signup.php?error=stmtfalhou");
+        header("location: ../frontEnd/signup.php?error=stmtfalhou");
         exit();
     }
 
@@ -124,7 +124,7 @@ function continueRegister($conn, $prof, $tel, $cidade, $estado, $fileNewName, $i
 
     mysqli_stmt_close($stmt);
 
-    header("location: ../front-end/profile.php");
+    header("location: ../frontEnd/profile.php");
     exit();
 }
 
@@ -135,7 +135,7 @@ function registerWork($conn, $cargo1, $time1, $desc1, $cargo2, $time2, $desc2, $
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
 
-        header("location: ../front-end/signup.php?error=stmtfalhou");
+        header("location: ../frontEnd/signup.php?error=stmtfalhou");
         exit();
     }
 
@@ -143,7 +143,7 @@ function registerWork($conn, $cargo1, $time1, $desc1, $cargo2, $time2, $desc2, $
 
     mysqli_stmt_close($stmt);   
 
-    header("location: ../front-end/profile.php");
+    header("location: ../frontEnd/profile.php");
     exit();
 }
 
@@ -154,7 +154,7 @@ function registerEducation($conn, $cargo1, $time1, $desc1, $cargo2, $time2, $des
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
 
-        header("location: ../front-end/signup.php?error=stmtfalhou");
+        header("location: ../frontEnd/signup.php?error=stmtfalhou");
         exit();
     }
 
@@ -162,7 +162,7 @@ function registerEducation($conn, $cargo1, $time1, $desc1, $cargo2, $time2, $des
 
     mysqli_stmt_close($stmt);   
 
-    header("location: ../front-end/profile.php");
+    header("location: ../frontEnd/profile.php");
     exit();
 }
 
@@ -173,7 +173,7 @@ function registerLanguage($conn, $cargo1, $desc1, $cargo2, $desc2, $cargo3, $des
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
 
-        header("location: ../front-end/signup.php?error=stmtfalhou");
+        header("location: ../frontEnd/signup.php?error=stmtfalhou");
         exit();
     }
 
@@ -181,7 +181,7 @@ function registerLanguage($conn, $cargo1, $desc1, $cargo2, $desc2, $cargo3, $des
 
     mysqli_stmt_close($stmt);   
 
-    header("location: ../front-end/profile.php");
+    header("location: ../frontEnd/profile.php");
     exit();
 }
 
@@ -206,7 +206,7 @@ function loginUsuario($conn, $nome, $senha){
 
     if($usuarioExiste == false){
 
-        header("location: ../front-end/login.php?error=loginfalhou");
+        header("location: ../frontEnd/login.php?error=loginfalhou");
         exit();
     }
 
@@ -215,14 +215,14 @@ function loginUsuario($conn, $nome, $senha){
 
     if($checkPwd == false){
 
-        header("location: ../front-end/login.php?error=loginfalhou");
+        header("location: ../frontEnd/login.php?error=loginfalhou");
         exit();
     }else if($checkPwd == true){
 
         session_start();
         $_SESSION["usu_id"] =  $usuarioExiste["usu_id"];
         $_SESSION["usu_usuario"] =  $usuarioExiste["usu_usuario"];
-        header("location: ../../index.php");
+        header("location: ../../resources/index.php");
         exit();
     }
 }

@@ -10,7 +10,7 @@
 
         if(inputVazioLogin($nome, $senha) !== false){
 
-            header("location: ../front-end/signup.php?error=inputvazio");
+            header("location: ../resources/frontEnd/signup.php?error=inputvazio");
             exit();
         }
         
@@ -18,6 +18,6 @@
 
     }else{
 
-        header("location: ../front-end/login.php");
+        header("location: ../resources/frontEnd/login.php");
         exit();
     }

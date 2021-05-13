@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="../styles/register.css">
 <body>
 
-<form id="regForm" method="POST" action="../back-end/language.php" enctype="multipart/form-data">
+<form id="regForm" method="POST" action="../backEnd/language.php" enctype="multipart/form-data">
   <h1>Registro:</h1>
   <div class="tab">Linguas:
     <p><input placeholder="Idioma..." oninput="this.className = ''" name="cargo1"></p>

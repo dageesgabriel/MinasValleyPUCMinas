@@ -5,39 +5,40 @@ if(isset($_POST["criar"])){
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $usuario = $_POST["usuario"];
+    $data = $_POST["data"];
     $senha = $_POST["senha"];
-    $senhaconf = $_POST["senhaconf"];   
+       
 
     require_once 'dbconnection.php';
     require_once 'functions.php';
 
-    if(inputVazio($nome, $email, $usuario, $senha, $senhaconf) !== false){
+    if(inputVazio($nome, $email, $usuario, $data, $senha) !== false){
 
-        header("location: ../front-end/signup.php?error=inputvazio");
+        header("location: ../resources/frontEnd/signup.php?error=inputvazio");
         exit();
     }
 
     if(usuarioInvalido($usuario) !== false){
 
-        header("location: ../front-end/signup.php?error=usuarioinvalido");
+        header("location: ../resources/frontEnd/signup.php?error=usuarioinvalido");
         exit();
     }
 
     if(emailInvalido($email) !== false){
 
-        header("location: ../front-end/signup.php?error=emailinvalido");
+        header("location: ../resources/frontEnd/signup.php?error=emailinvalido");
         exit();
     }
     
     if(senhaNaoBate($senha, $senhaconf) !== false){
 
-        header("location: ../front-end/signup.php?error=senhanaobate");
+        header("location: ../resources/frontEnd/signup.php?error=senhanaobate");
         exit();
     }
 
     if(usuarioExiste($conn, $usuario, $email) !== false){
 
-        header("location: ../front-end/signup.php?error=usuariojaexiste");
+        header("location: ../resources/frontEnd/signup.php?error=usuariojaexiste");
         exit();
     }
 
@@ -46,7 +47,7 @@ if(isset($_POST["criar"])){
     
 }else{
 
-    header("location: ../front-end/login.php");
+    header("location: ../resources/frontEnd/login.php");
     exit();
 }
 ?>

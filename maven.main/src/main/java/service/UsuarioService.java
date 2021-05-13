@@ -21,7 +21,7 @@ public class UsuarioService {
 		String email = request.queryParams("email");
 		String senha = request.queryParams("senha");
 		LocalDate dataNascimento = LocalDate.parse(request.queryParams("dataNascimento"));
-		String idCadastro = request.queryParams("idCadastro");
+		String idCadastro = request.queryParams("usuario");
 		
 		UsuarioServiceConfig();
 		
@@ -49,7 +49,7 @@ public class UsuarioService {
 		} else {
 			response.status(404); // 404 Not found
 			dao.close();
-			return "Usuario " + nome + " não encontrado.";
+			return "Usuario " + nome + " nï¿½o encontrado.";
 		}
 	}
 
@@ -74,7 +74,7 @@ public class UsuarioService {
 		} else {
 			response.status(404); // 404 Not found
 			dao.close();
-			return "Usuario não encontrado.";
+			return "Usuario nï¿½o encontrado.";
 		}
 	}
 	
@@ -95,7 +95,7 @@ public class UsuarioService {
 		} else {
 			response.status(404); // 404 Not found
 			dao.close();
-			return "Usuario não encontrado.";
+			return "Usuario nï¿½o encontrado.";
 		}
 	}
 
@@ -111,7 +111,7 @@ public class UsuarioService {
 		} else {
 			response.status(404); // 404 Not found
 			dao.close();
-			return "Usuarios não encontrados.";
+			return "Usuarios nï¿½o encontrados.";
 		}
 	}
 
