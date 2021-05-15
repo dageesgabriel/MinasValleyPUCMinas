@@ -2,6 +2,8 @@ package dao;
 
 import java.sql.*;
 
+import model.Projeto;
+
 /**
  * Classe ProjetoDAO
  * 
@@ -11,6 +13,7 @@ import java.sql.*;
 
 public class ProjetoDAO {
 	private Connection conexao;
+	private int maxId = 0;
 	
 	public ProjetoDAO() {
 		conexao = null;
@@ -50,6 +53,10 @@ public class ProjetoDAO {
 			System.err.println(e.getMessage());
 		}
 		return status;
+	}
+
+	public int getMaxId() {
+		return maxId;
 	}
 	
 	public boolean inserirProjeto(Projeto Projeto) {
@@ -95,6 +102,23 @@ public class ProjetoDAO {
 		return status;
 	}
 	
+	public Projeto getProjeto(int id) {
+		Projeto projeto;
+		try {  
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT FROM Projeto WHERE Id = " + id);
+			
+			projeto = new Projeto(rs.getInt("id"), rs.getInt("idUsuario"), 
+            rs.getString("nome"), rs.getString("descricao"), rs.getDate("contato");
+			
+			st.close();
+		} catch (SQLException u) {  
+			throw new RuntimeException(u);
+		}
+		return projeto;
+	}
+	
+
 	
 	public Projeto[] getProjetos() {
 		Projeto[] projetos = null;

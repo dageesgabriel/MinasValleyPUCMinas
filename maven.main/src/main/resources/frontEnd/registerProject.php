@@ -85,17 +85,19 @@ session_start();
             <div class="w3-container">
  
                 <div style="float: left; width: 130px; height :170px;">
-                    <h2 class="w3-text-grey w3-padding-16"><img src="../images/registerStartup&Projetos/startups.png" style="width:120%"></h2>
+                    <h2 class="w3-text-grey w3-padding-16"><img src="../images/registerStartup&Projetos/projeto.png" style="width:120%"></h2>
                 </div>
 
                 <div class="project-space-head" style="float: left; width: 150px; height :170px;">
 
+
                   <div class="form-container sign-in-container">
 		                <form action="../resources/backEnd/signup.php" method="post">
-			                <input type="text" name="nome" placeholder="Nome da startup" style="float: left; border-radius:4px; margin: 38px 0 0 30px;"><br>
+			                <input type="text" name="nome" placeholder="Nome do projeto" style="float: left; border-radius:4px; margin: 38px 0 0 30px;"><br>
 		              	  <button type="submit" name="criar" style="float: left; border-radius:4px; margin: 0 0 0 80px;">Salvar</button><br>
                     </form>
                   </div>
+
 
                         <div class="project-name2" form method="POST" action="startup.php" enctype="multipart/form-data">
 			                <div class="estrelas" style="float: right; margin: 10px 0 0 30px;">
@@ -127,13 +129,15 @@ session_start();
             <div class="w3-container">
                 <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-bar-chart fa-fw w3-margin-right w3-xxlarge"></i>Descrição</h2><hr>
 
+
                 <div class="form-container sign-in-container">
 		                <form action="../resources/backEnd/signup.php" method="post">
-			                <input type="text" name="nome" placeholder="Adicione a descrição da sua Startup" style="float: left; border-radius:4px; margin: 2px 0 5px 5px; width: 650px; height :320px;"><br>
+			                <input type="text" name="nome" placeholder="Adicione a descrição do seu projeto" style="float: left; border-radius:4px; margin: 2px 0 5px 5px; width: 650px; height :320px;"><br>
                       <button type="submit" name="criar" style="float: left; border-radius:4px; margin: 275px 0 0 5px;">Salvar</button><br>
                     </form>
                   </div>
 
+                  
                 <br>
             </div>
         </div><br>
@@ -151,14 +155,13 @@ session_start();
     
       <div class="w3-container w3-white w3-margin-bottom">
         <div class="project-space-img">
-            <img src="../images/registerStartup&Projetos/startupM1.jpg" style="width:110%">
+            <img src="../images/registerStartup&Projetos/projeto1.png" style="width:94%">
         </div>
       </div>
 
     <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-container">
             <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-users fa-fw w3-margin-right w3-xxlarge"></i>Contato</h2><hr>
-
 
             <div class="form-container sign-in-container">
 		                <form action="../resources/backEnd/signup.php" method="post">
@@ -168,6 +171,7 @@ session_start();
                       <button type="submit" name="criar" style="float: left; border-radius:4px; margin: 4px 0 0 5px;">Salvar</button><br>
                     </form>
                   </div>
+
 
         </div>
     </div><br>
