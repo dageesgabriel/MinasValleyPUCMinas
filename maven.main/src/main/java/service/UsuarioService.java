@@ -1,117 +1,109 @@
-package service;
-
 import java.time.LocalDate;
-
-import dao.UsuarioDAO;
-import model.Usuario;
-import spark.Request;
+import org.graalvm.compiler.core.GraalCompiler.Request;
+import model.Startup;
 import spark.Response;
 
 public class UsuarioService {
 
-	UsuarioDAO dao = new UsuarioDAO();
+	StartupDAO dao = new StartupDAO();
 
-	private void UsuarioServiceConfig() {
+	private void StartupServiceConfig() {
 		dao.conectar();
 	}
 
 	// Add an element to the table
 	public Object add(Request request, Response response) {
 		String nome = request.queryParams("nome");
-		String email = request.queryParams("email");
-		String senha = request.queryParams("senha");
-		LocalDate dataNascimento = LocalDate.parse(request.queryParams("dataNascimento"));
-		String idCadastro = request.queryParams("usuario");
+		String descricao = request.queryParams("Descrição");
+		String contato = request.queryParams("Contato");
+		String idUusario = request.queryParams("usuario");
 		
-		UsuarioServiceConfig();
+		StartupServiceConfig();
 		
 		int id = dao.getMaxId() + 1;
 
-		Usuario usuario = new Usuario(id, nome, email, senha, dataNascimento, idCadastro);
+		StartUp_Modelo startup = new StartUp_Modelo();
 
-		dao.inserirUsuario(usuario);
+		dao.inserirStartup(startup);
 
 		response.status(201); // 201 Created
 		dao.close();
 		return id;
 	}
 
-	// Get an element from the table
 	public Object get(Request request, Response response) {
 		String nome = request.queryParams(":nome");
-		UsuarioServiceConfig();
+		StartupServiceConfig();
 
-		Usuario usuario = (Usuario) dao.getUsuario(nome);
-
-		if (usuario != null) {
+		StartUp_Modelo startup= (StartUp_Modelo) dao.getStartup(nome);
+		if (startup != null) {
 			dao.close();
-			return usuario;
+			return startup;
 		} else {
 			response.status(404); // 404 Not found
 			dao.close();
-			return "Usuario " + nome + " n�o encontrado.";
+			return "Startup " + nome + " não encontrado.";
 		}
 	}
 
 	// Update an element from the table
 	public Object update(Request request, Response response) {
 		String nome = request.queryParams(":nome");
-		UsuarioServiceConfig();
+		StartupServiceConfig();
 
-		Usuario usuario = dao.getUsuario(nome);
+		StartUp_Modelo startup= new StartUp_Modelo();
 
-		if (usuario != null) {
-			usuario.setNome(request.queryParams("nome"));
-			usuario.setEmail(request.queryParams("email"));
-			usuario.setSenha(request.queryParams("senha"));
-			usuario.setDataNascimento(LocalDate.parse(request.queryParams("dataNascimento")));
-			usuario.setIdCadastro(request.queryParams("idCadastro"));
+		if (startup != null) {
+			startup.setNome(request.queryParams("nome"));
+			startup.setContato(request.queryParams("contato"));
+			startup.setDescricao(request.queryParams("Descrição"));
+			startup.setIdUsuario(request.queryParams("idUsuario"));
 
-			dao.atualizarUsuario(usuario);
-
+			dao.atualizarStartup(startup);
 			dao.close();
 			return nome;
+			
 		} else {
 			response.status(404); // 404 Not found
 			dao.close();
-			return "Usuario n�o encontrado.";
-		}
-	}
+			return "Startup não encontrada.";
+		}}
 	
-	// Remove an element from the table
 	public Object remove(Request request, Response response) {
 		String nome = request.queryParams(":nome");
-		UsuarioServiceConfig();
+		StartupServiceConfig();
 
-		Usuario usuario = (Usuario) dao.getUsuario(nome);
+		StartupDAO startup= new StartupDAO();
+		
+		if (startup != null) {
 
-		if (usuario != null) {
-
-			dao.excluirUsuario(nome);
+			dao.excluirStarup(nome);
 
 			response.status(200); // success
 			dao.close();
-			return nome;
-		} else {
+			return nome;}
+		
+		else {
 			response.status(404); // 404 Not found
 			dao.close();
-			return "Usuario n�o encontrado.";
+			return "Startup não encontrada.";
 		}
 	}
 
 	public Object getAll(Request request, Response response) {
-		UsuarioServiceConfig();
+		StartupServiceConfig();
 		
-		Usuario[] usuarios = null;
-		usuarios = dao.getUsuarios();
+		StartupDAO[] startup;
+		startup= dao.getStartup();
 
-		if (usuarios != null) {
+			if (startup != null) {
+
 			dao.close();
-			return usuarios;
+			return startup;
 		} else {
 			response.status(404); // 404 Not found
 			dao.close();
-			return "Usuarios n�o encontrados.";
+			return "startups não encontradas";
 		}
 	}
 
