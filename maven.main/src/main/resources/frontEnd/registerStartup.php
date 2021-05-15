@@ -4,7 +4,7 @@ session_start();
 
 <!DOCTYPE html>
 <html>
-<title>Startup</title>
+<title>RegisterStartup</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="../images/minasValley/logos/minasValleyFaviconNoFund.png">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -85,14 +85,24 @@ session_start();
             <div class="w3-container">
  
                 <div style="float: left; width: 130px; height :170px;">
-                    <h2 class="w3-text-grey w3-padding-16"><img src="../images/startups/nubank/logoNoFund.png" style="width:100%"></h2>
+                    <h2 class="w3-text-grey w3-padding-16"><img src="../images/registerStartup&Projetos/startups.png" style="width:120%"></h2>
                 </div>
 
                 <div class="project-space-head" style="float: left; width: 150px; height :170px;">
-                    <div class="project-name w3-text-grey w3-padding-16">NUBANK<br><div class="project-whatis">Startup</div></div>
+
+
+
+                  <div class="form-container sign-in-container">
+		                <form action="../resources/backEnd/signup.php" method="post">
+			                <input type="text" name="nome" placeholder="Nome da startup" style="float: left; border-radius:4px; margin: 38px 0 0 30px;"><br>
+		              	  <button type="submit" name="criar" style="float: left; border-radius:4px; margin: 0 0 0 80px;">Salvar</button><br>
+                    </form>
+                  </div>
+
+
 
                         <div class="project-name2" form method="POST" action="startup.php" enctype="multipart/form-data">
-			                <div class="estrelas">
+			                <div class="estrelas" style="float: right; margin: 10px 0 0 30px;">
 				                <input type="radio" id="vazio" name="estrela" value="" checked>
 				
 				                <label for="estrela_um"><i class="fa"></i></label>
@@ -129,71 +139,25 @@ session_start();
             <div class="w3-container">
                 <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-bar-chart fa-fw w3-margin-right w3-xxlarge"></i>Descrição</h2><hr>
 
-                <p><i class="w3-margin-right w3-large"></i>A história do Nubank começou com uma péssima experiência que David Vélez, CEO e fundador, teve com os serviços financeiros no Brasil. ... Junto da brasileira Cristina Junqueira e do americano Edward Wible, Vélez fundou em 2013 o Nubank, hoje o maior banco digital independente do mundo.</p>
-                <p><i class="w3-margin-right w3-large"></i>O Nubank é uma empresa que usa a tecnologia e design para devolver às pessoas o controle sobre a sua vida financeira.</p>
-                  <p><i class="w3-margin-right w3-large"></i>Criamos produtos simples e transparentes, que respeitam e dão liberdade aos nossos clientes – e temos times trabalhando dia e noite para atendê-los da melhor forma possível.</p>
-                  <p><i class="w3-margin-right w3-large"></i>Nosso primeiro lançamento foi um cartão de crédito gratuito sem taxas ou anuidades – o roxinho. Ele é um cartão de crédito internacional, com a bandeira MasterCard®.</p>
-                  <p><i class="w3-margin-right w3-large"></i>Além dele, o Nubank lançou também um programa de benefícios de cartão de crédito com pontos que nunca expiram – o Nubank Rewards – e uma conta digital e gratuita, com transferências ilimitadas, na qual seu dinheiro rende mais do que na poupança – a Conta do Nubank, NuConta.</p>
-                  <p><i class="w3-margin-right w3-large"></i>Hoje, o Nubank já possui mais de 20 milhões de clientes – 12 milhões são usuários do cartão Nubank.</p>
+
+
+
+
+
+
+                <div class="form-container sign-in-container">
+		                <form action="../resources/backEnd/signup.php" method="post">
+			                <input type="text" name="nome" placeholder="Adicione a descrição da sua Startup" style="float: left; border-radius:4px; margin: 2px 0 5px 5px; width: 650px; height :320px;"><br>
+                      <button type="submit" name="criar" style="float: left; border-radius:4px; margin: 275px 0 0 5px;">Salvar</button><br>
+                    </form>
+                  </div>
+
+                  
                 <br>
             </div>
         </div><br>
 
-        <!-- Second Left Column -->
-        <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-container">
-                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-link fa-fw w3-margin-right w3-xxlarge"></i>Links</h2><hr>
-                  <a href="https://www.Nubank.com.br/">Nubank.com.br</a></p><br>
-            </div>
-        </div><br>
 
-        <!-- Third Left Column -->
-        <div class="w3-white w3-text-grey w3-card-4">
-            <div class="project-space-comments">
-                <div> 
-                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-inbox fa-fw w3-margin-right w3-xxlarge"></i>Avalie</h2><hr>
-
-                <h5>Sua Avaliação:</h5>
-                <div class="project-name2" form method="POST" action="startup.php" enctype="multipart/form-data">
-			        <div class="estrelas">
-				        <input type="radio" id="vazio" name="estrela" value="" checked>
-				
-				        <label for="estrela_um"><i class="fa"></i></label>
-				        <input type="radio" id="estrela_um" name="estrela" value="1">
-				
-				        <label for="estrela_dois"><i class="fa"></i></label>
-				        <input type="radio" id="estrela_dois" name="estrela" value="2">
-				
-				        <label for="estrela_tres"><i class="fa"></i></label>
-				        <input type="radio" id="estrela_tres" name="estrela" value="3">
-				
-				        <label for="estrela_quatro"><i class="fa"></i></label>
-				        <input type="radio" id="estrela_quatro" name="estrela" value="4">
-				
-				        <label for="estrela_cinco"><i class="fa"></i></label>
-                        <input type="radio" id="estrela_cinco" name="estrela" value="5">
-                    </div>
-                </div>
-
-                <h5 id="formComentarios"><br>Nome:</h5>
-                    <input type="text" id="campoNome" />
-                </div>
-        
-                <p> </p>
-      
-                <h5><br>Comentários:</h5>
-                <textarea rows="10" cols="90" name="comentarios" type="text" maxlength="300" style="resize: none;" class="project-textarea" id="campoComentario" form="ussform"></textarea>
-                
-                <h5>
-                    <br><input id="btnIncluirComentario" type="button" value="Publicar Avaliação">
-                    <input id="btnCarregaDados" type="button" style="margin: 0 0 0 30px" value="Ver Comentários">
-                </h5>
-
-                <br><hr><div id="tela"></div>
-                <script src="../scripts/comment.js"></script>
-
-            </div>
-        </div><br>
 
       <!-- End Class After Column -->
       </div><br>
@@ -206,16 +170,26 @@ session_start();
     
       <div class="w3-container w3-white w3-margin-bottom">
         <div class="project-space-img">
-            <img src="../images/startups/nubank/nubank01.png" style="width:90%">
+            <img src="../images/registerStartup&Projetos/startupM1.jpg" style="width:110%">
         </div>
       </div>
 
     <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-container">
             <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-users fa-fw w3-margin-right w3-xxlarge"></i>Contato</h2><hr>
-               <p>0800 608 6236</p>
-               <p>meajuda@nubank.com.br</p>
-               <p>Atendimento 24h</p>
+               
+
+
+            <div class="form-container sign-in-container">
+		                <form action="../resources/backEnd/signup.php" method="post">
+			                <input type="text" name="nome" placeholder="Adicione o telefone para contato" style="float: left; border-radius:4px; margin: 0 0 5px 5px; width: 240px; height :30px;"><br>
+                      <input type="text" name="nome" placeholder="Adicione o email para contato" style="float: left; border-radius:4px; margin: 0 0 5px 5px; width: 240px; height :30px;"><br>
+                      <input type="text" name="nome" placeholder="Adicione o horario de funcionamento" style="float: left; border-radius:4px; margin: 0 0 5px 5px; width: 240px; height :30px;"><br>
+                      <button type="submit" name="criar" style="float: left; border-radius:4px; margin: 4px 0 0 5px;">Salvar</button><br>
+                    </form>
+                  </div>
+
+
         </div>
     </div><br>
 

@@ -18,8 +18,8 @@ public class UsuarioDAO {
 		String mydatabase = "MinasValley";
 		int porta = 5432;
 		String url = "jdbc:postgresql://" + serverName + ":" + porta +"/" + mydatabase;
-		String username = "ogab";
-		String password = "ogab";
+		String username = "ti2cc";
+		String password = "ti@cc";
 		boolean status = false;
 
 		try {
@@ -57,7 +57,7 @@ public class UsuarioDAO {
 		try {  
 			Statement st = conexao.createStatement();
 			this.maxId = (usuario.getId() > this.maxId) ? usuario.getId() : this.maxId;
-			st.executeUpdate("INSERT INTO Usuario (Id, DataNascimento, Nome, Email, Senha, IdCadastro) "
+			st.executeUpdate("INSERT INTO Usuario (Id, DataNascimento, Nome, Email, Senha, IdCadastro "
 					       + "VALUES ("+usuario.getId()+ ", '" + usuario.getDataNascimento() + "', '"  
 					       + usuario.getNome() + "', '" + usuario.getEmail() + ", '" + usuario.getSenha() + "');"); 
 					       //+ ", '" + usuario.getIdCadastro + "');");
