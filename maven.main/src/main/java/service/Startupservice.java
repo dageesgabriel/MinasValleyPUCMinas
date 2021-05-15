@@ -3,7 +3,7 @@ import org.graalvm.compiler.core.GraalCompiler.Request;
 import model.Startup;
 import spark.Response;
 
-public class UsuarioService {
+public class Startupservice();
 
 	StartupDAO dao = new StartupDAO();
 
