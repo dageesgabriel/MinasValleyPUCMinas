@@ -1,7 +1,7 @@
 <?php
 
-$link = pg_connect("host=minasvalley.postgres.database.azure.com port=5432 dbname=minasvalley user=adm@minasvalley password=valleyValley$");
-if (!$link) {
+$conn = pg_connect("host=minasvalley.postgres.database.azure.com port=5432 dbname=minasvalley user=adm@minasvalley password=valleyValley$");
+if (!$conn) {
     die('Erro ao conectar com o banco PGSQL');
     }
     echo "Conectado com sucesso";
