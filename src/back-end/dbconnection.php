@@ -1,6 +1,7 @@
 <?php
 
-$conn = mysqli_connect("minasvalley.postgres.database.azure.com", "adm@minasvalley", "valleyValley$", "minasvalley");
+$conn = pg_connect("host=minasvalley.postgres.database.azure.com port=5432 dbname=minasvalley user=adm@minasvalley password=valleyValley$");
+
 
 if (!$conn) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
