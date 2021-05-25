@@ -1,6 +1,6 @@
 <?php
 
-$cconn = pg_connect ("host=minasvalley.postgres.database.azure.com dbname=minasvalley port=5432 user=adm@minasvalley password=valleyValley$");
+$conn = pg_connect ("host=minasvalley.postgres.database.azure.com dbname=minasvalley port=5432 user=adm@minasvalley password=valleyValley$");
 
 if (!$conn) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -12,5 +12,4 @@ if (!$conn) {
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
 
-?>
 ?>
