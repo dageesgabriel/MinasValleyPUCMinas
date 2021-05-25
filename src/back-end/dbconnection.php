@@ -10,6 +10,6 @@ if (!$conn) {
 }
 
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-echo "Host information: " . pg_host($conn) . PHP_EOL;
+echo "Host information: " . pg_get_result($conn) . PHP_EOL;
 
 ?>
