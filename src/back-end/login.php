@@ -8,7 +8,7 @@
         require_once 'dbconnection.php';
         require_once 'functions.php';
 
-        echo "Conectado com sucesso";
+        echo "Conectado com sucesso1";
 
         if(inputVazioLogin($nome, $senha) !== false){
 
@@ -16,7 +16,7 @@
             exit();
         }
         
-        echo "Conectado com sucesso";
+        echo "Conectado com sucesso2";
 
         loginUsuario($conn, $nome, $senha);
 

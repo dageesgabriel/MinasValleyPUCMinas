@@ -90,7 +90,7 @@ function criarUsuario($conn, $nome, $usuario, $email, $senha){
 
     echo "Conectado com sucesso";
     $sql = "INSERT INTO usuario (usu_nome, usu_usuario, usu_email, usu_senha) VALUES (?, ?, ?, ?);";
-    echo "hereeeeeeeeeeeeeeeee";
+    echo "hereeeeeeeeeeeeeeeeer";
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
