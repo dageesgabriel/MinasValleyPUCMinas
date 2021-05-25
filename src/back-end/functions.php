@@ -88,6 +88,7 @@ function usuarioExiste($conn, $usuario, $email){
 
 function criarUsuario($conn, $nome, $usuario, $email, $senha){
 
+    echo "Conectado com sucesso";
     $sql = "INSERT INTO usuario (usu_nome, usu_usuario, usu_email, usu_senha) VALUES (?, ?, ?, ?);";
     echo "hereeeeeeeeeeeeeeeee";
     $stmt = mysqli_stmt_init($conn);

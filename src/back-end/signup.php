@@ -41,7 +41,9 @@ if(isset($_POST["criar"])){
         exit();
     }
 
+    echo "Conectado com sucesso";
     criarUsuario($conn, $nome, $usuario, $email, $senha);
+    echo "Conectado com sucesso";
 
     
 }else{
