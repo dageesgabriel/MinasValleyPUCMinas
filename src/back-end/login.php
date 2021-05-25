@@ -5,7 +5,12 @@
         $nome = $_POST["nomelog"];
         $senha = $_POST["senhalog"];
 
+        echo "Conectado com sucesso1";
+
         require_once 'dbconnection.php';
+
+        echo "Conectado com sucesso1";
+
         require_once 'functions.php';
 
         echo "Conectado com sucesso1";
