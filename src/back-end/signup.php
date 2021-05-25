@@ -8,12 +8,8 @@ if(isset($_POST["criar"])){
     $senha = $_POST["senha"];
     $senhaconf = $_POST["senhaconf"];   
 
-
-    echo "Conectado com sucesso3";
     require_once 'dbconnection.php';
-    echo "Conectado com sucesso3";
     require_once 'functions.php';
-    echo "Conectado com sucesso3";
 
     if(inputVazio($nome, $email, $usuario, $senha, $senhaconf) !== false){
 
@@ -45,9 +41,7 @@ if(isset($_POST["criar"])){
         exit();
     }
 
-    echo "Conectado com sucesso3";
     criarUsuario($conn, $nome, $usuario, $email, $senha);
-    echo "Conectado com sucesso4";
 
     
 }else{
