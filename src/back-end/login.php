@@ -30,3 +30,4 @@
         header("location: ../front-end/login.php");
         exit();
     }
+    ?>
