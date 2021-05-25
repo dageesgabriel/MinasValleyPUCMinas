@@ -86,29 +86,10 @@ function usuarioExiste($conn, $usuario, $email){
     mysqli_stmt_close($stmt);
 }
 
-function criarUsuario($conn, $nome, $usuario, $email, $senha){
+function criarUsuario($nome, $email, $usuario, $senha){
 
-    echo "Conectado com sucesso";
-    $sql = "INSERT INTO usuario (usu_nome, usu_usuario, usu_email, usu_senha) VALUES (?, ?, ?, ?);";
-    echo "hereeeeeeeeeeeeeeeeer";
-    $stmt = mysqli_stmt_init($conn);
-
-    if(!mysqli_stmt_prepare($stmt, $sql)){
-
-        header("location: ../front-end/signup.php?error=stmtfalhou");
-        exit();
+    $sql = "INSERT INTO usuario (usu_nome, usu_email, usu_usuario, usu_senha) VALUES ('$nome', '$email', '$usuario', '$senha');";
     }
-
-    $hashedSenha = password_hash($senha, PASSWORD_DEFAULT);
-
-    mysqli_stmt_bind_param($stmt, "ssss", $nome, $usuario, $email, $hashedSenha);
-
-    mysqli_stmt_execute($stmt);
-
-    mysqli_stmt_close($stmt);
-
-    header("location: ../front-end/login.php");
-    exit();
 }
 
 function continueRegister($conn, $prof, $tel, $cidade, $estado, $fileNewName, $id){

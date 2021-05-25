@@ -1,6 +1,6 @@
 <?
 
-Class Conexao
+Class dbconnection
 {
 protected $host = “minasvalley.postgres.database.azure.com”;
 protected $user = adm@minasvalley;
@@ -14,7 +14,7 @@ function __construct(){} //método construtor
 function open(){
 $this->con = @pg_connect(“host=$this->host user=$this->user
 password=$this->pswd dbname=$this->dbname“);
-return $this->con;
+return $th
 }
 
 #método que encerra a conexao
@@ -34,4 +34,4 @@ echo “<h3>O sistema está conectado à  [$this->dbname] em [$this->host].</h3>
 }
 }
 
-?
+?>
