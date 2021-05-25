@@ -1,13 +1,23 @@
 <?php
 
-    $conexao = pg_connect("host=minasvalley.postgres.database.azure.com port=5432 dbname=minasvalley user=adm@minasvalley password=valleyValley$");
+include_once('dbconnection.php');
 
-     $usu_nome = isset($_POST['usu_name']) ? $_POST['usu_nome'] : '',
-     $usu_email = isset($_POST['usu_email']) ? $_POST['usu_email'] : '',
-     $usu_usuario = isset($_POST['usu_usuario']) ? $_POST['usu_usuario'] : '',
-     $usu_senha = isset($_POST['usu_senha']) ? $_POST['usu_senha'] : '',
+    $nome = $_POST["nome"];
+    $email = $_POST["email"];
+    $usuario = $_POST["usuario"];
+    $senha = $_POST["senha"];
+    $senhaconf = $_POST["senhaconf"]; 
 
-     $sql = "INSERT INTO usuario (usu_nome, usu_email, usu_usuario, usu_senha) VALUES ('$usu_nome', '$usu_email', '$usu_usuario', '$usu_senha');";
+    private $conexao;
+    $this->conexao = ConectaBanco::conexao();
+    
+    $stmt = $this->conexao->prepare("INSERT INTO usuario (usu_nome, usu_email, usu_usuario, usu_senha) VALUES (?, ?, ?, ?)");
+     
+        $stmt->blindParam(1, $this->usu_nome);
+        $stmt->blindParam(1, $this->usu_email);
+        $stmt->blindParam(1, $this->usu_usuario);
+        $stmt->blindParam(1, $this->usu_senha);
 
-     $res = pg_exec($conexao, $sql);
+        stmt->execute();
+
 ?>

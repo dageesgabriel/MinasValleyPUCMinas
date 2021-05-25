@@ -1,37 +1,26 @@
-<?
+<?php
 
-Class dbconnection
-{
-protected $host = “minasvalley.postgres.database.azure.com”;
-protected $user = adm@minasvalley;
-protected $pswd = “valleyValley$\”;
-protected $dbname = “minasvalley”;
-protected $con = null;
+class dbconnection {
 
-function __construct(){} //método construtor
+    public static $con;
 
-#método que inicia conexao
-function open(){
-$this->con = @pg_connect(“host=$this->host user=$this->user
-password=$this->pswd dbname=$this->dbname“);
-return $th
-}
+    public static function conexao(){
 
-#método que encerra a conexao
-function close(){
-@pg_close($this->con);
-}
+        if(!isset(self::$con)){
 
-#método verifica status da conexao
-function statusCon(){
-if(!$this->con){
-echo “<h3>O sistema não está conectado à  [$this->dbname] em [$this->host].</h3>”;
-exit;
-}
-else{
-echo “<h3>O sistema está conectado à  [$this->dbname] em [$this->host].</h3>”;
-}
-}
-}
+            $host = 'minasvalley.postgres.database.azure.com';
+            $user = 'adm@minasvalley';
+            $pass = 'valleyValley$';
+            $db = 'minasvalley';
 
-?>
+            try{
+                self::$con = new PDO("mysql:host=$host;dbname=$db;", $user, $pass);
+                self::$con->exec('SET CHARSET utf8');
+            }
+            catch(Exception $e){
+                echo $e->getMessage();
+            }
+        }
+        return self::$con;
+    }
+}
