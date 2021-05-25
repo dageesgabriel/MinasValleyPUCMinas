@@ -1,14 +1,37 @@
-<?php
+<?
 
-$conn = pg_connect("host=minasvalley.postgres.database.azure.com port=5432 dbname=minasvalley user=adm@minasvalley password=valleyValley$");
+Class Conexao
+{
+protected $host = “minasvalley.postgres.database.azure.com”;
+protected $user = adm@minasvalley;
+protected $pswd = “valleyValley$\”;
+protected $dbname = “minasvalley”;
+protected $con = null;
 
-if (!$conn) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
+function __construct(){} //método construtor
+
+#método que inicia conexao
+function open(){
+$this->con = @pg_connect(“host=$this->host user=$this->user
+password=$this->pswd dbname=$this->dbname“);
+return $this->con;
 }
 
-echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+#método que encerra a conexao
+function close(){
+@pg_close($this->con);
+}
 
-?>
+#método verifica status da conexao
+function statusCon(){
+if(!$this->con){
+echo “<h3>O sistema não está conectado à  [$this->dbname] em [$this->host].</h3>”;
+exit;
+}
+else{
+echo “<h3>O sistema está conectado à  [$this->dbname] em [$this->host].</h3>”;
+}
+}
+}
+
+?
