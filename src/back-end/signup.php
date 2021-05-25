@@ -11,7 +11,7 @@ include_once('dbconnection.php');
     private $conexao;
     $this->conexao = ConectaBanco::conexao();
     
-    $stmt = $this->conexao->prepare("INSERT INTO usuario (usu_nome, usu_email, usu_usuario, usu_senha) VALUES (?, ?, ?, ?)");
+    $stmt = $this->conexao->prepare("INSERT INTO usuario (usu_nome, usu_email, usu_usuario, usu_senha) VALUES (nome, email, usuario, senha)");
      
         $stmt->blindParam(1, $this->usu_nome);
         $stmt->blindParam(1, $this->usu_email);
