@@ -1,28 +1,12 @@
 <?php
 
-include(‘dbconnection.php’);
-$minhaConexao = new Conexao();
-$minhaConexao->open();
-$minhaConexao->statusCon();
+    $conexao = pg_connect("host=minasvalley.postgres.database.azure.com port=5432 dbname=minasvalley user=adm@minasvalley password=valleyValley$");
 
-if(isset($_POST["criar"])){
+     $usu_nome = isset($_POST['usu_name']) ? $_POST['usu_nome'] : '',
+     $usu_email = isset($_POST['usu_email']) ? $_POST['usu_email'] : '',
+     $usu_usuario = isset($_POST['usu_usuario']) ? $_POST['usu_usuario'] : '',
+     $usu_senha = isset($_POST['usu_senha']) ? $_POST['usu_senha'] : '',
 
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
-    $senhaconf = $_POST["senhaconf"];   
-
-    require_once 'functions.php';
-
-    criarUsuario($nome, $email, $usuario, $senha);
-    
-}else{
-
-    header("location: ../front-end/login.php");
-    exit();
-}
-
-$minhaConexao->close();
+     $sql = "INSERT INTO usuario (usu_nome, usu_email, usu_usuario, usu_senha) VALUES ('$usu_nome', '$usu_email', '$usu_usuario', '$usu_senha');";
 
 ?>
