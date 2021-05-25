@@ -9,4 +9,5 @@
 
      $sql = "INSERT INTO usuario (usu_nome, usu_email, usu_usuario, usu_senha) VALUES ('$usu_nome', '$usu_email', '$usu_usuario', '$usu_senha');";
 
+     $res = pg_exec($conexao, $sql);
 ?>
