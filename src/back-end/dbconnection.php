@@ -8,9 +8,9 @@ class dbconnection {
 
         if(!isset(self::$con)){
 
-            $host = 'minasvalley.postgres.database.azure.com';
-            $user = 'adm@minasvalley';
-            $pass = 'valleyValley$';
+            $host = 'localhost';
+            $user = 'ti2cc';
+            $pass = 'ti@ccc';
             $db = 'minasvalley';
 
             try{
